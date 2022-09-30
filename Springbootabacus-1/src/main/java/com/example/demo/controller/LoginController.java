@@ -25,7 +25,7 @@ public class LoginController {
 	}
 	
 	@GetMapping("/login/{email}/{password}")
-	@CrossOrigin(origins = "http://localhost:3000")
+	@CrossOrigin(origins = "http://localhost:8081")
 	public String loginCheck(@PathVariable String email, @PathVariable String password) {
 		return loginservice.checkLogin(email,password);
 	}
