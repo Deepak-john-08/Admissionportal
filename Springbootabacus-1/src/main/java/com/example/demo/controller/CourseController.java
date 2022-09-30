@@ -24,19 +24,19 @@ public class CourseController {
 	private CourseService service;
 	
 	@PostMapping("/addCourse")
-	@CrossOrigin(origins = "http://localhost:3000")
+	@CrossOrigin(origins = "http://localhost:8081")
 	public Course addCourse(@RequestBody Course course) {			
 		return service.saveCourse(course);
 	}
 	
 	@GetMapping("/getCourses")
-	@CrossOrigin(origins = "http://localhost:3000")
+	@CrossOrigin(origins = "http://localhost:8081")
 	public List<Course> getCourses(){
 		return service.getCourses();
 	}
 	
 	@DeleteMapping("/delCourse/{id}")
-	@CrossOrigin(origins = "http://localhost:3000")
+	@CrossOrigin(origins = "http://localhost:8081")
 	public String delCourse(@PathVariable int id){
 		return service.deleteCourse(id);		
 	}	
