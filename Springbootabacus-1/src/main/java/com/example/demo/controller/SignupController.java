@@ -16,7 +16,7 @@ public class SignupController {
 	private SignupService service;
 	
 	@PostMapping("/addUser")
-	@CrossOrigin(origins = "http://localhost:3000")
+	@CrossOrigin(origins = "http://localhost:8081")
 	public Signup addUser(@RequestBody Signup signup) {			
 		return service.saveSignup(signup);
 	}
